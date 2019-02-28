@@ -264,7 +264,7 @@ bil=2
 bui=0
 
 while bui<=bil:
-     x=random.randint(2,11)
+     x=random.randint(0,23)
      if x not in cut:
        bui=bui+1
        cut.append(x)
@@ -277,7 +277,22 @@ tus=hat+thing1
 tut=hat+thing2
 tun=hat+thing3
 
-#cat== digets catindex== numberofdigets hat==total of all digets added thing1,2&3 == random diget between 2&11 tus,tut,tun==hat*thing1,2,3
+if tus>=26:
+   tus=tus % 26
+   
+print(tus)
+
+if tut>=26:
+   tut=tut % 26
+   
+print (tut)
+   
+if tun>=26:
+   tun=tun % 26
+   
+print(tun)
+
+#cat== digets catindex== numberofdigets hat==total of all digets added thing1,2&3 == random diget between 2&11 tus,tut,tun==hat+thing %26
 
 #print(cat)
 #print(catindex)
@@ -417,7 +432,7 @@ elif sect3==3:
 
 count=0
 
-while count<=tus:
+while tus>=0:
     card1=deck1[count]
     if count==25:
         count=0
@@ -429,9 +444,13 @@ print (card1)
 
 count=0
 
-while count<=tut:
+while tut>=0:
     card2=deck2[count]
-    if count==25:
+    if card2==card1 and count>=24:
+        card2=deck2[count+1]
+    elif card2==card1:
+       count
+    elif count==25:
         count=0
         tut=tut-26 
     else:
@@ -441,9 +460,15 @@ print (card2)
 
 count=0
 
-while count<=tun:
+while tun>=0:
     card3=deck3[count]
-    if count==25:
+    if card3==card2 or card1 and count>=24:
+       count=count+1
+       card3=deck3[count]
+    elif card3==card2 or card1:
+       count=count-
+       card3=deck3[count]
+    elif count==25:
         count=0
         tun=tun-26 
     else:
