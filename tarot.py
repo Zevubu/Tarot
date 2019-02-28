@@ -280,24 +280,24 @@ tun=hat+thing3
 if tus>=26:
    tus=tus % 26
    
-print(tus)
+#print(tus)
 
 if tut>=26:
    tut=tut % 26
    
-print (tut)
+#print (tut)
    
 if tun>=26:
    tun=tun % 26
    
-print(tun)
+#print(tun)
 
 #cat== digets catindex== numberofdigets hat==total of all digets added thing1,2&3 == random diget between 2&11 tus,tut,tun==hat+thing %26
 
 #print(cat)
 #print(catindex)
-print(hat)
-print(cut)   
+#print(hat)
+#print(cut)   
 #print(thing1)
 #print(tus)
 #print(thing2)
@@ -407,7 +407,7 @@ sect3=ran(1,3)
 
 catch=sect1,sect2,sect3
 
-print(catch)
+#print(catch)
 
 if sect1==1:
    deck1=tarot0
@@ -430,49 +430,15 @@ elif sect3==2:
 elif sect3==3:
    deck3=tarot21
 
-count=0
+card1=deck1[tus]
 
-while tus>=0:
-    card1=deck1[count]
-    if count==25:
-        count=0
-        tus=tus-26 
-    else:
-        count=count+1
- 
 print (card1)
 
-count=0
-
-while tut>=0:
-    card2=deck2[count]
-    if card2==card1 and count>=24:
-        card2=deck2[count+1]
-    elif card2==card1:
-       count
-    elif count==25:
-        count=0
-        tut=tut-26 
-    else:
-        count=count+1
+card2=deck2[tut]
         
 print (card2)
 
-count=0
-
-while tun>=0:
-    card3=deck3[count]
-    if card3==card2 or card1 and count>=24:
-       count=count+1
-       card3=deck3[count]
-    elif card3==card2 or card1:
-       count=count-
-       card3=deck3[count]
-    elif count==25:
-        count=0
-        tun=tun-26 
-    else:
-        count=count+1
+card3=deck3[tun]
         
 print (card3)
 
@@ -482,3 +448,9 @@ print (card3)
 #print (t0)
 #print (t10)
 #print (t21)
+
+
+
+
+   
+
