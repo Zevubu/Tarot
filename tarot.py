@@ -1,3 +1,10 @@
+#3 card draw. Ask a question turns question into list of numbers.
+#Runs algerithum to choose card between 1 and 26 3 times out of 3 randomly chosen lists
+#This is one of my first programs. I built almost all peices in it from scratch and trile and eror.
+#using sololearn as a guide when I got stuck.
+#The current up to date version as it stands. Including some notes on process.
+
+
 #Ask a question
 quest=input()
 max_index=len(quest)-1
@@ -257,6 +264,8 @@ while count<=catindex:
       hat=hat+cat[count]
       count=count+1
 
+#This is one of the few section I looked up and copied.
+#it produces 3 different random numbers with no cross over. 
 import random
 
 cut=[]
@@ -291,6 +300,11 @@ if tun>=26:
    tun=tun % 26
    
 #print(tun)
+
+#It took me longer then I care to admit to figure out...
+#that the quickest way to reduce my my number to less then 26...
+#was just to divide them by 26 and go with the remainder.
+#25==26 26==0
 
 #cat== digets catindex== numberofdigets hat==total of all digets added thing1,2&3 == random diget between 2&11 tus,tut,tun==hat+thing %26
 
@@ -453,4 +467,5 @@ print (card3)
 
 
    
+
 
