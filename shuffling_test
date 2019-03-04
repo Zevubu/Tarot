@@ -11,9 +11,8 @@ tarot0=[]
 tarot10=[]
 tarot21=[]
 a=tarot0
-b=len(a)
 
-
+#Shuffles the 78 card into 3 list of 26.
 while bui<=25:
      x=random.randint(0,77)
      if x not in cut:   
