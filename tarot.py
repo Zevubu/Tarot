@@ -1,8 +1,9 @@
+#The current up to date version as it stands.
 #3 card draw. Ask a question turns question into list of numbers.
-#Runs algerithum to choose card between 1 and 26 3 times out of 3 randomly chosen lists
+#Runs algerithum to choose card between 1 and 26, 3 times, out of 3 randomly choosen lists
 #This is one of my first programs. I built almost all peices in it from scratch and trile and eror.
-#using sololearn as a guide when I got stuck.
-#The current up to date version as it stands. Including some notes on process.
+#using sololearn and google as a guide when I got stuck.
+#The current up to date version as it stands. Including some notes on process and function.
 
 
 #Ask a question
@@ -13,7 +14,7 @@ counter=0
 cat=[]  
 
 print (quest)
-
+#turns question into list of numbers
 while counter<=max_index:
     bat=quest[counter]
     if bat=='a':
@@ -148,7 +149,9 @@ while counter<=max_index:
         art=0
     cat.append(art)
     counter=counter+1
-    
+
+# Takes list of numbers and deletes interigers. 
+# IE what where when why so on. leaveing only the more varied portion of code    
 tom=len(cat)
 count=0
 til=0
@@ -254,7 +257,7 @@ while tom>=til:
 #to add:
 
    
-  
+#Takes Remaining numbers on cat and add them into one number ie hat.  
 
 catindex=len(cat)-1
 count=0
@@ -264,8 +267,10 @@ while count<=catindex:
       hat=hat+cat[count]
       count=count+1
 
-#This is one of the few section I looked up and copied.
-#it produces 3 different random numbers with no cross over. 
+ 
+
+#it produces 3 distinct random numbers. 
+#This is one of the few section I looked up I copied and tweeked it to fit my needs.
 import random
 
 cut=[]
@@ -277,7 +282,8 @@ while bui<=bil:
      if x not in cut:
        bui=bui+1
        cut.append(x)
-      
+
+#adds random nuber ons to hat creating three new distinct numbers.      
 thing1=cut[0] 
 thing2=cut[1]
 thing3=cut[2]
@@ -286,6 +292,7 @@ tus=hat+thing1
 tut=hat+thing2
 tun=hat+thing3
 
+# Divides the 3 numb by 26 leaving the remainder. which by nature will be 0-25.
 if tus>=26:
    tus=tus % 26
    
@@ -398,6 +405,7 @@ lllll=('Queen of Cups')
 mmmmm=('King of Cups')
 nnnnn=('Knight of Cups')
 
+#in this area I will be adding a shuffler makeing 3 random lists 26 each.
 tarot0=[zero,a,l,d,p,g,s,u,cc,ff,ii,ll,aaa,ddd,ggg,kkk,nnn,aaaa,dddd,gggg,jjjj,mmmm,bbbbb,fffff,iiiii,lllll]
 
 t0=len(tarot0)
@@ -408,6 +416,7 @@ t10=len(tarot10)
 tarot21=[v,b,m,e,q,t,h,bb,ee,hh,kk,nn,ccc,fff,iii,mmm,cccc,ffff,iiii,llll,aaaaa,ddddd,eeeee,hhhhh,kkkkk,nnnnn]
 t21=len(tarot21)
 
+#Determins which deck will be pulled from. 
 import random
 
 def ran(y,z):
@@ -444,6 +453,7 @@ elif sect3==2:
 elif sect3==3:
    deck3=tarot21
 
+# finaly what cards will be shown, and in what order
 card1=deck1[tus]
 
 print (card1)
@@ -455,6 +465,14 @@ print (card2)
 card3=deck3[tun]
         
 print (card3)
+
+#still to be added: 
+# Reverse cards, 
+# larger or small draw ie number of cards shown, 
+# save draws for reexamining, 
+# card definitions
+# english to hebrew translation with kabolic reading. 
+# Pictures and genoral front end.
 
 
  
