@@ -1,7 +1,7 @@
 #The current up to date version as it stands.
 #3 card draw. Ask a question turns question into list of numbers.
 #Runs algerithum to choose card between 1 and 26, 3 times, out of 3 randomly choosen lists
-#This is one of my first programs. I built almost all peices in it from scratch and trile and eror.
+#This is one of my first programs. I built almost all peices in it from scratch, trile and eror.
 #using sololearn and google as a guide when I got stuck.
 #The current up to date version as it stands. Including some notes on process and function.
 
@@ -150,7 +150,7 @@ while counter<=max_index:
     cat.append(art)
     counter=counter+1
 
-# Takes list of numbers and deletes interrogative words. 
+# Takes list of numbers and deletes interigers. 
 # IE what where when why so on. leaveing only the more varied portion of code    
 tom=len(cat)
 count=0
@@ -326,95 +326,55 @@ if tun>=26:
 #print(thing3)
 #print(tun)
 
-zero=('The Fool')
-a=('I The Magician')
-b=('II High Priestess')
-c=('III The Empress')
-d=('IIII The Emperor')
-e=('V The High Priest')
-f=('VI The Lovers')
-g=('VII The Chariot')
-h=('VIII Justice')
-i=('VIIII The Hermit')
-j=('X The Wheel of Fortune')
-k=('XI Strength')
-l=('XII The Hanged Man')
-m=('XIII The Nameless Card')
-o=('XIIII temperance')
-p=('XV The Devil')
-q=('XVI The Tower')
-r=('XVII The Star')
-s=('XVIII The Moon')
-t=('XVIIII The Sun')
-u=('XX Judgement')
-v=('XXI The World')
-aa=('Ace of Pentacles')
-bb=('II of Pentacles' )
-cc=('III of Pentacles')
-dd=('IIII of Pentacles')
-ee=('V of Pentacles')
-ff=('VI of Pentacles')
-gg=('VII Pentacles')
-hh=('VIII of Pentacles')
-ii=('VIIII of Pentacles')
-jj=('X of Pentacles')
-kk=('Page of Pentacles')
-ll=('Queen of Pentacles')
-mm=('King of Pentacles')
-nn=('Knight of Pentacles')
-aaa=('Ace of Wands')
-bbb=('II of Wands')
-ccc=('III of Wands')
-ddd=('IIII of Wands')
-eee=('V of Wands')
-fff=('VI of Wands')
-ggg=('VII of Wands')
-hhh=('VIII of Wands')
-iii=('VIIII of Wands')
-jjj=('X of Wands')
-kkk=('Page of Wands')
-lll=('Queen of Wands')
-mmm=('King of Wands')
-nnn=('Knight of Wands')
-aaaa=('Ace of Swords')
-bbbb=('II of Swords')
-cccc=('III of Swords')
-dddd=('IIII of Swords')
-eeee=('V of Swords')
-ffff=('VI of Swords')
-gggg=('VII of Swords')
-hhhh=('VIII of Swords')
-iiii=('VIIII of Swords')
-jjjj=('X of Swords')
-kkkk=('Page of Swords')
-llll=('Queen of Swords')
-mmmm=('King of Swords')
-nnnn=('Knight of Swords')
-aaaaa=('Ace of Cups')
-bbbbb=('II of Cups')
-ccccc=('III of Cups')
-ddddd=('IIII of Cups')
-eeeee=('V of Cups')
-fffff=('VI of Cups')
-ggggg=('VII of Cups')
-hhhhh=('VIII of Cups')
-iiiii=('VIIII of Cups')
-jjjjj=('X of Cups')
-kkkkk=('Page of Cups')
-lllll=('Queen of Cups')
-mmmmm=('King of Cups')
-nnnnn=('Knight of Cups')
+import random
 
-#in this area I will be adding a shuffler makeing 3 random lists 26 each.
-tarot0=[zero,a,l,d,p,g,s,u,cc,ff,ii,ll,aaa,ddd,ggg,kkk,nnn,aaaa,dddd,gggg,jjjj,mmmm,bbbbb,fffff,iiiii,lllll]
+tarot=('The Fool','I The Magician','II High Priestess','III The Empress','IIII The Emperor','V The High Priest','VI The Lovers','VII The Chariot','VIII Justice','VIIII The Hermit','X The Wheel of Fortune','XI Strength','XII The Hanged Man','XIII The Nameless Card','XIIII temperance','XV The Devil','XVI The Tower','XVII The Star','XVIII The Moon','XVIIII The Sun','XX Judgement','XXI The World','Ace of Pentacles','II of Pentacles','III of Pentacles','IIII of Pentacles','V of Pentacles','VI of Pentacles','VII Pentacles','VIII of Pentacles','VIIII of Pentacles','X of Pentacles','Page of Pentacles','Queen of Pentacles','King of Pentacles','Knight of Pentacles','Ace of Wands','II of Wands','III of Wands','IIII of Wands','V of Wands','VI of Wands','VII of Wands','VIII of Wands','VIIII of Wands','X of Wands','Page of Wands','Queen of Wands','King of Wands','Knight of Wands','Ace of Swords','II of Swords','III of Swords','IIII of Swords','V of Swords','VI of Swords','VII of Swords','VIII of Swords','VIIII of Swords','X of Swords','Page of Swords','Queen of Swords','King of Swords','Knight of Swords','Ace of Cups','II of Cups','III of Cups','IIII of Cups','V of Cups','VI of Cups','VII of Cups','VIII of Cups','VIIII of Cups','X of Cups','Page of Cups','Queen of Cups','King of Cups','Knight of Cups')
+tcou=len(tarot)
+
+(tcou)
+
+cut=[]
+bui=0
+tarot0=[]
+tarot10=[]
+tarot21=[]
+a=tarot0
+
+#Shuffles the 78 card into 3 list of 26.
+while bui<=25:
+     x=random.randint(0,77)
+     if x not in cut:   
+      cut.append(x)
+      a.append(tarot[x]) 
+      if bui>=25 and a==tarot0:
+          #print("tarot0 check")
+          bui=0
+          a=tarot10
+      elif bui>=25 and a==tarot10:
+          #print("tarot10 check")
+          bui=0
+          a=tarot21 
+      elif bui>=25 and a==tarot21:
+          #print("tarot21 check")
+          bui=26
+      else:
+          bui=bui+1   
+      
+               
 
 t0=len(tarot0)
-
-tarot10=[j,k,c,o,f,r,i,aa,dd,gg,jj,mm,bbb,eee,hhh,lll,jjj,bbbb,eeee,hhhh,kkkk,nnnn,ccccc,ggggg,jjjjj,mmmmm]
 t10=len(tarot10)
+t21=len(tarot21) 
+#cl=len(cut)
+#print(cut)
+#print(cl)
 
-tarot21=[v,b,m,e,q,t,h,bb,ee,hh,kk,nn,ccc,fff,iii,mmm,cccc,ffff,iiii,llll,aaaaa,ddddd,eeeee,hhhhh,kkkkk,nnnnn]
-t21=len(tarot21)
+#print (tarot0)
+#print (t0)
+#print (tarot10)
+#print (t10)
+#print (tarot21)
+#print (t21)
 
 #Determins which deck will be pulled from. 
 import random
@@ -480,10 +440,4 @@ print (card3)
 #print (t0)
 #print (t10)
 #print (t21)
-
-
-
-
-   
-
 
