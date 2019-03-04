@@ -150,7 +150,7 @@ while counter<=max_index:
     cat.append(art)
     counter=counter+1
 
-# Takes list of numbers and deletes interigers. 
+# Takes list of numbers and deletes interrogative words. 
 # IE what where when why so on. leaveing only the more varied portion of code    
 tom=len(cat)
 count=0
