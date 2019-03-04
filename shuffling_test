@@ -14,21 +14,25 @@ a=tarot0
 b=len(a)
 
 
-while bui<=26:
+while bui<=25:
      x=random.randint(0,77)
      if x not in cut:   
+      cut.append(x)
+      a.append(tarot[x]) 
       if bui>=25 and a==tarot0:
+          print("tarot0 check")
           bui=0
           a=tarot10
       elif bui>=25 and a==tarot10:
+          print("tarot10 check")
           bui=0
           a=tarot21 
       elif bui>=25 and a==tarot21:
+          print("tarot21 check")
           bui=26
       else:
           bui=bui+1   
-      cut.append(x)
-      a.append(tarot[x])
+      
                
 
 t0=len(tarot0)
