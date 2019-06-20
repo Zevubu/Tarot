@@ -15,6 +15,7 @@ cat=[]
 
 print (quest)
 #turns question into list of numbers
+
 while counter<=max_index:
     bat=quest[counter]
     if bat=='a':
@@ -38,7 +39,7 @@ while counter<=max_index:
     elif bat=='j':
         art=10
     elif bat=='k':
-         art=11
+        art=11
     elif bat=='l':
         art=12
     elif bat=='m':
@@ -191,7 +192,7 @@ while tom>=til:
             cat.remove(cat[0])
             count=count+1
     elif tom>=3 and cat[0]==9 and cat[1]==6 and cat[2]==0:
-         while count<=2:
+        while count<=2:
             cat.remove(cat[0])
             count=count+1 
     elif tom>=3 and cat[0]==9 and cat[1]==19 and cat[2]==0:
@@ -199,11 +200,11 @@ while tom>=til:
             cat.remove(cat[0])
             count=count+1   
     elif tom>=4 and cat[0]==3 and cat[1]==1 and cat[2]==14 and cat[3]==0:
-         while count<=3:
-             cat.remove(cat[0])
-             count=count+1 
+        while count<=3:
+            cat.remove(cat[0])
+            count=count+1 
     elif tom>=6 and cat[0]==3 and cat[1]==15 and cat[2]==21 and cat[3]==12 and cat[4]==4 and cat[5]==0:
-         while count<=5:
+        while count<=5:
             cat.remove(cat[0])
             count=count+1    
     elif tom>=3 and cat[0]==4 and cat[1]==15 and cat[2]==0:
@@ -247,9 +248,9 @@ while tom>=til:
             cat.remove(cat[0])
             count=count+1  
     elif tom>=3 and cat[0]==1 and cat[1]==13 and cat[2]==0:
-         while count<=2:
-             cat.remove(cat[0])   
-             count=count+1    
+        while count<=2:
+            cat.remove(cat[0])   
+            count=count+1    
     til=til+1
     count=0                                                     
 #done:when where while why what would will if is can should could do are want wish who how which can't cant am
@@ -264,8 +265,8 @@ count=0
 hat=(0) 
 
 while count<=catindex:
-      hat=hat+cat[count]
-      count=count+1
+    hat=hat+cat[count]
+    count=count+1
 
  
 
@@ -278,10 +279,10 @@ bil=2
 bui=0
 
 while bui<=bil:
-     x=random.randint(0,23)
-     if x not in cut:
-       bui=bui+1
-       cut.append(x)
+    x=random.randint(0,23)
+    if x not in cut:
+        bui=bui+1
+        cut.append(x)
 
 #adds random nuber ons to hat creating three new distinct numbers.      
 thing1=cut[0] 
@@ -294,17 +295,17 @@ tun=hat+thing3
 
 # Divides the 3 numb by 26 leaving the remainder. which by nature will be 0-25.
 if tus>=26:
-   tus=tus % 26
+    tus=tus % 26
    
 #print(tus)
 
 if tut>=26:
-   tut=tut % 26
+    tut=tut % 26
    
 #print (tut)
    
 if tun>=26:
-   tun=tun % 26
+    tun=tun % 26
    
 #print(tun)
 
@@ -342,23 +343,23 @@ a=tarot0
 
 #Shuffles the 78 card into 3 list of 26.
 while bui<=25:
-     x=random.randint(0,77)
-     if x not in cut:   
-      cut.append(x)
-      a.append(tarot[x]) 
-      if bui>=25 and a==tarot0:
-          #print("tarot0 check")
-          bui=0
-          a=tarot10
-      elif bui>=25 and a==tarot10:
-          #print("tarot10 check")
-          bui=0
-          a=tarot21 
-      elif bui>=25 and a==tarot21:
-          #print("tarot21 check")
-          bui=26
-      else:
-          bui=bui+1   
+    x=random.randint(0,77)
+    if x not in cut:   
+        cut.append(x)
+        a.append(tarot[x]) 
+        if bui>=25 and a==tarot0:
+            #print("tarot0 check")
+            bui=0
+            a=tarot10
+        elif bui>=25 and a==tarot10:
+            #print("tarot10 check")
+            bui=0
+            a=tarot21 
+        elif bui>=25 and a==tarot21:
+            #print("tarot21 check")
+            bui=26
+        else:
+            bui=bui+1   
       
                
 
@@ -380,9 +381,9 @@ t21=len(tarot21)
 import random
 
 def ran(y,z):
-   for i in range(3):
-      x=random.randint(y,z)
-      return(x)
+    for i in range(3):
+        x=random.randint(y,z)
+        return(x)
 
 sect1=ran(1,3)
 sect2=ran(1,3)
@@ -393,25 +394,25 @@ catch=sect1,sect2,sect3
 #print(catch)
 
 if sect1==1:
-   deck1=tarot0
+    deck1=tarot0
 elif sect1==2:
-   deck1=tarot10
+    deck1=tarot10
 elif sect1==3:
-   deck1=tarot21
+    deck1=tarot21
    
 if sect2==1:
-   deck2=tarot0
+    deck2=tarot0
 elif sect2==2:
-   deck2=tarot10
+    deck2=tarot10
 elif sect2==3:
-   deck2=tarot21
+    deck2=tarot21
    
 if sect3==1:
-   deck3=tarot0
+    deck3=tarot0
 elif sect3==2:
-   deck3=tarot10
+    deck3=tarot10
 elif sect3==3:
-   deck3=tarot21
+    deck3=tarot21
 
 # finaly what cards will be shown, and in what order
 card1=deck1[tus]
