@@ -151,8 +151,8 @@ while counter<=max_index:
     cat.append(art)
     counter=counter+1
 
-# Takes list of numbers and deletes interigers. 
-# IE what where when why so on. leaveing only the more varied portion of code    
+# Takes list of numbers and deletes the numericle reprisentaion of interigers (standered words that start questions). 
+# IE what where when why so on. leaveing only the more varied portion of code only if the question isn't the word alone. 
 tom=len(cat)
 count=0
 til=0
@@ -309,13 +309,14 @@ if tun>=26:
    
 #print(tun)
 
-#It took me longer then I care to admit to figure out...
-#that the quickest way to reduce my my number to less then 26...
-#was just to divide them by 26 and go with the remainder.
-#25==26 26==0
+# It took me longer then I care to admit to figure out...
+# that the quickest way to reduce my number to less then 26...
+# was just to divide them by 26 and go with the remainder.
+# 25==26 26==0
 
 #cat== digets catindex== numberofdigets hat==total of all digets added thing1,2&3 == random diget between 2&11 tus,tut,tun==hat+thing %26
 
+#testing area.
 #print(cat)
 #print(catindex)
 #print(hat)
